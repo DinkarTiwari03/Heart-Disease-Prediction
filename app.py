@@ -21,7 +21,14 @@ sex = st.selectbox("Sex", ["Male", "Female"])
 chest_pain = st.selectbox("Chest Pain Type", ["Typical Angina", "Atypical Angina", "Non-Anginal Pain", "Asymptomatic"])
 resting_bp = st.number_input("Resting Blood Pressure (mmHg)", 80, 200, 120)
 cholesterol = st.number_input("Cholesterol (mg/dl)", 100, 600, 200)
-fasting_bs = st.selectbox("Fasting Blood Sugar > 120 mg/dl", ["Yes", "No"])
+fasting_bs = st.selectbox(
+    "Fasting Blood Sugar > 120 mg/dl",
+    ["Yes", "No"]
+)
+
+# Convert to 1/0
+fasting_bs_value = 1 if fasting_bs == "Yes" else 0
+
 resting_ecg = st.selectbox("Resting ECG", ["Normal", "ST-T Wave Abnormality", "Left Ventricular Hypertrophy"])
 max_hr = st.slider("Max Heart Rate", 60, 220, 150)
 exercise_angina = st.selectbox("Exercise Induced Angina", ["Y", "N"])
