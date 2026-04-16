@@ -1,0 +1,5 @@
+creatingthe venv by running: 
+ python -m venv venv
+
+before running this program 
+activate the venv by: source venv(bin) activate
